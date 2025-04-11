@@ -41,7 +41,7 @@ jobs:
           name: wdio-report
           path: wdio-reports/
 
-      - name: 📸 Upload Screenshots
+      - name: Upload Screenshots
         uses: actions/upload-artifact@v4
         with:
           name: error-screenshots
