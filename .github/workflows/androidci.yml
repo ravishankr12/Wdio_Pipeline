@@ -24,10 +24,10 @@ jobs:
       - name: Start Emulator and Run Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 34
+          api-level: 30
           target: google_apis
           arch: x86_64
-          profile: Pixel_3a
+          profile: Nexus_5X
           script: |
             adb install ./app/android/SauceLabs.apk
             npm install -g appium
