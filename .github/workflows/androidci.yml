@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: 🤖 Start Emulator and Run Tests
+      - name: Start Emulator and Run Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
