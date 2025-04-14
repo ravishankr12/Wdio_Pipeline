@@ -1,4 +1,4 @@
-name: Android CI Pipeline Tests
+name: Android UI Tests
 
 on:
   push:
@@ -21,18 +21,30 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Start Emulator and Run Tests
+      - name: 🤖 Start Emulator and Run Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
           target: google_apis
           arch: x86_64
-          profile: Pixel_3a
+          profile: Nexus 6
           script: |
+            echo "Emulator is up!"
+
+            echo "Installing app"
             adb install ./app/android/SauceLabs.apk
+
+            echo "Detecting emulator device ID"
+            export DEVICE_ID=$(adb devices | grep emulator | cut -f1)
+            echo "DEVICE_ID=$DEVICE_ID" >> $GITHUB_ENV
+            echo "Using DEVICE: $DEVICE_ID"
+
+            echo "Starting Appium"
             npm install -g appium
             appium --log-level info &
             sleep 10
+
+            echo "Running Tests"
             npm run test:android
 
       - name: Upload WDIO Test Report
