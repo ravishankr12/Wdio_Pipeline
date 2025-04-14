@@ -29,22 +29,34 @@ jobs:
           arch: x86_64
           profile: Nexus 6
           script: |
-            echo "Emulator is up!"
+            echo "Emulator started, waiting for boot to complete..."
 
-            echo "Installing app"
+            adb wait-for-device
+
+            # Wait for boot to complete
+            boot_completed="0"
+            until [[ "$boot_completed" == "1" ]]; do
+              echo "Waiting for emulator to finish booting..."
+              sleep 5
+              boot_completed=$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r')
+            done
+
+            echo "Emulator booted successfully!"
+
+            echo "Installing app..."
             adb install ./app/android/SauceLabs.apk
 
-            echo "Detecting emulator device ID"
+            echo "Detecting emulator device ID..."
             export DEVICE_ID=$(adb devices | grep emulator | cut -f1)
             echo "DEVICE_ID=$DEVICE_ID" >> $GITHUB_ENV
             echo "Using DEVICE: $DEVICE_ID"
 
-            echo "Starting Appium"
+            echo "Starting Appium server..."
             npm install -g appium
             appium --log-level info &
             sleep 10
 
-            echo "Running Tests"
+            echo "Running test cases..."
             npm run test:android
 
       - name: Upload WDIO Test Report
