@@ -43,7 +43,7 @@ export const config = {
     {
       "appium:platformName": "Android",
       "appium:deviceName": "Pixel_3a",
-      "appium:platformVersion": "14.0",
+      "appium:platformVersion": "11.0",
       "appium:automationName": "UiAutomator2",
       "appium:app": path.join(process.cwd(), "app/android/SauceLabs.apk"),
       "appium:appWaitActivity": "*",
