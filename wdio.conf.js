@@ -4,8 +4,18 @@ dotenv.config();
 
 export const config = {
   // runner: "local",
-  user: "ravishanker_jvX2ZU",
-  key: "kqRrbsxx2WNJzhtyVget",
+
+  //Browser_Stack credentials 
+  //WHEN WE PASS THE VALUE FROM THE CONFIG FILE TO BROWSERSTACK
+  // user: "ravishanker_jvX2ZU",
+  // key: "kqRrbsxx2WNJzhtyVget",
+
+  user: process.env.BROWSERSTACK_USER,
+  key: process.env.BROWSERSTACK_KEY,
+
+
+
+
   specs: ["./test/specs/android/UI_E2E.spec.js"],
   exclude: [],
   maxInstances: 10,
