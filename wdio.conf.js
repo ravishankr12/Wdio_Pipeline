@@ -3,53 +3,27 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const config = {
-  runner: "local",
-  specs: ["./test/specs/android/*.js"],
+  // runner: "local",
+  user: "ravishanker_jvX2ZU",
+  key: "kqRrbsxx2WNJzhtyVget",
+  specs: ["./test/specs/android/UI_E2E.spec.js"],
   exclude: [],
   maxInstances: 10,
-  services: ["appium"],
+  services: ["browserstack"],
   hostname: "localhost",
-  port: 4723,
-  path: "/wd/hub",
-
-  /**
-   * =============================================
-   * TASK: Parallel Execution of Tests on Multiple Emulators
-   * =============================================
-   * GOAL:
-   * Configure WebdriverIO to run test scripts in parallel
-   * across multiple Android emulators using Appium.
-   *
-   * SOLUTION:
-   * - Defined two capabilities: Pixel_9 (Android 16.0) and Pixel_8 (Android 14.0).
-   * - Set `maxInstances` to 10, allowing multiple sessions to run in parallel.
-   * - With this config, if you have one test script, it will be executed
-   *   concurrently on both Pixel_9 and Pixel_8 emulators.
-   * - WebdriverIO handles this automatically — no manual parallel logic needed.
-   * =============================================
-   */
-
+  // port: 4723,
+  // path: "/wd/hub",
   capabilities: [
-    // {
-    //   "appium:platformName": "Android",
-    //   "appium:deviceName": "Pixel_9",
-    //   "appium:platformVersion": "16.0",
-    //   "appium:automationName": "UiAutomator2",
-    //   "appium:app": path.join(process.cwd(), "app/android/SauceLabs.apk"),
-    //   "appium:appWaitActivity": "*",
-    //   "appium:autoGrantPermissions": true,
-    //   "appium:noReset": true,
-    // },
     {
-      "appium:platformName": "Android",
-      "appium:deviceName": "Pixel_3a",
-      "appium:platformVersion": "11.0",
+      "platformName": "Android",
+      "appium:deviceName": "Pixel_9",
+      "appium:platformVersion": "16.0",
       "appium:automationName": "UiAutomator2",
-      "appium:app": path.join(process.cwd(), "app/android/SauceLabs.apk"),
-      "appium:appWaitActivity": "*",
+      "appium:app": "bs://e1525b5769965b14339587d93ed9b49b95e3f532",
+      // "appium:appWaitActivity": "*",
       "appium:autoGrantPermissions": true,
-      "appium:noReset": true,
-    },
+      // "appium:noReset": true,
+    }
   ],
 
   logLevel: "info",
