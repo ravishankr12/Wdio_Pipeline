@@ -10,19 +10,24 @@ export const config = {
   exclude: [],
   maxInstances: 10,
   services: ["browserstack"],
-  hostname: "localhost",
+  // hostname: "localhost",
   // port: 4723,
   // path: "/wd/hub",
   capabilities: [
     {
       "platformName": "Android",
-      "appium:deviceName": "Pixel_9",
-      "appium:platformVersion": "16.0",
+      "appium:deviceName": "Google Pixel 9",
+      "appium:platformVersion": "15.0",
       "appium:automationName": "UiAutomator2",
       "appium:app": "bs://e1525b5769965b14339587d93ed9b49b95e3f532",
-      // "appium:appWaitActivity": "*",
       "appium:autoGrantPermissions": true,
-      // "appium:noReset": true,
+      "appium:appWaitActivity": "*",
+      "bstack:options": {
+        "projectName": "My Android E2E Tests",
+        "buildName": "Build 1.0",
+        "sessionName": "UI E2E Flow",
+        "idleTimeout": 300
+      }
     }
   ],
 

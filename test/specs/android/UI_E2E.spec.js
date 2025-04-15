@@ -8,6 +8,8 @@ import CheckoutStepThreeScreen from '../../../screenobjects/android/checkoutstep
 describe('E2E Test Suite', () => {
   it('E2E Order Placement for Sauce Labs Backpack', async () => {
     await LoginScreen.login(process.env.USERNAME, process.env.PASSWORD);
+    //await LoginScreen.login('standard_user', 'secret_sauce');
+    
     
     await InventoryScreen.addToCart();
     await InventoryScreen.openCart();
