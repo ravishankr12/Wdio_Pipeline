@@ -2,12 +2,6 @@ name: Android UI Tests
 
 on: [push]
 
-permissions:
-  contents: read      # To read repo content (needed for checking out code and report generation)
-  actions: read       # To read the action metadata and logs
-  secrets: read       # To access secrets (like BS_USER and BS_KEY) for BrowserStack
-  packages: write     # To upload artifacts, i.e., the zipped Allure report (if required)
-
 jobs:
   build:
     runs-on: ubuntu-22.04  # ✅ Use stable runner
