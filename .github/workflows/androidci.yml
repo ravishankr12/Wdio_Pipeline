@@ -1,4 +1,4 @@
-name: Android UI Tests
+name: Android UI Tests GitActions
 on: [push]
 jobs:
   build:

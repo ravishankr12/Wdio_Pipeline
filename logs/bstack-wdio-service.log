@@ -1,11 +1,11 @@
-[90m2025-04-16T05:17:12.133Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m BrowserStack service started with id: a96a1ead-805b-4eae-ae95-c879e9f85088
-[90m2025-04-16T05:17:12.139Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending SDK event with data {
+[90m2025-04-16T05:43:45.804Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m BrowserStack service started with id: fe87839c-2680-4555-8902-a00526a6536f
+[90m2025-04-16T05:43:45.810Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending SDK event with data {
   userName: '[REDACTED]',
   accessKey: '[REDACTED]',
   event_type: 'SDKTestAttempted',
   detectedFramework: 'WebdriverIO-mocha',
   event_properties: {
-    sdkRunId: 'a96a1ead-805b-4eae-ae95-c879e9f85088',
+    sdkRunId: 'fe87839c-2680-4555-8902-a00526a6536f',
     testhub_uuid: undefined,
     language_framework: 'WebdriverIO_mocha',
     referrer: 'WebdriverIO-mocha/9.12.4',
@@ -26,7 +26,7 @@
     framework: 'mocha'
   }
 }
-[90m2025-04-16T05:17:12.575Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Exception in sending funnel data: ResponseError: Error response from server 401:  {"message":"Unauthorized"}
+[90m2025-04-16T05:43:46.270Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Exception in sending funnel data: ResponseError: Error response from server 401:  {"message":"Unauthorized"}
     at fetchWrap (file:///Users/testvagrant/Work/Wdio_Pipeline/node_modules/@wdio/browserstack-service/build/index.js:256:11)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async fireFunnelRequest (file:///Users/testvagrant/Work/Wdio_Pipeline/node_modules/@wdio/browserstack-service/build/index.js:3147:20)
@@ -56,25 +56,25 @@
     }
   }
 }
-[90m2025-04-16T05:17:12.575Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m app is not defined in browserstack-service config, skipping ...
-[90m2025-04-16T05:17:12.576Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending launch start event
-[90m2025-04-16T05:17:13.544Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m [Start_Build] Success response: {"success":false,"options":null,"code":null,"errors":[{"message":"Access to BrowserStack denied due to incorrect credentials.","key":"ERROR_INVALID_CREDENTIALS"}],"error_trace_id":"45b782f1-4a17-442f-b6f3-d6ebd67a1065"}
-[90m2025-04-16T05:17:13.544Z[39m [31mERROR[39m [97m@wdio/browserstack-service[39m OBSERVABILITY Build creation failed null
-[90m2025-04-16T05:17:13.545Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m browserstackLocal is not enabled - skipping...
-[90m2025-04-16T05:17:23.373Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m teardown started
-[90m2025-04-16T05:17:23.373Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m teardown ended
-[90m2025-04-16T05:17:23.801Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Inside OnComplete hook..
-[90m2025-04-16T05:17:23.801Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending stop launch event
-[90m2025-04-16T05:17:23.802Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m [STOP_BUILD] Missing Authentication Token/ Build ID
-[90m2025-04-16T05:17:23.803Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m BrowserStack service run ended for id: a96a1ead-805b-4eae-ae95-c879e9f85088 testhub id: undefined
-[90m2025-04-16T05:17:23.804Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Reading worker file worker-data-11745.json
-[90m2025-04-16T05:17:23.807Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending SDK event with data {
+[90m2025-04-16T05:43:46.270Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m app is not defined in browserstack-service config, skipping ...
+[90m2025-04-16T05:43:46.271Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending launch start event
+[90m2025-04-16T05:43:47.145Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m [Start_Build] Success response: {"success":false,"options":null,"code":null,"errors":[{"message":"Access to BrowserStack denied due to incorrect credentials.","key":"ERROR_INVALID_CREDENTIALS"}],"error_trace_id":"b4e3ac6b-1d0c-4b4f-90db-d7d3be9baf5e"}
+[90m2025-04-16T05:43:47.145Z[39m [31mERROR[39m [97m@wdio/browserstack-service[39m OBSERVABILITY Build creation failed null
+[90m2025-04-16T05:43:47.146Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m browserstackLocal is not enabled - skipping...
+[90m2025-04-16T05:43:57.638Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m teardown started
+[90m2025-04-16T05:43:57.638Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m teardown ended
+[90m2025-04-16T05:43:58.090Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Inside OnComplete hook..
+[90m2025-04-16T05:43:58.090Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending stop launch event
+[90m2025-04-16T05:43:58.090Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m [STOP_BUILD] Missing Authentication Token/ Build ID
+[90m2025-04-16T05:43:58.094Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m BrowserStack service run ended for id: fe87839c-2680-4555-8902-a00526a6536f testhub id: undefined
+[90m2025-04-16T05:43:58.095Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Reading worker file worker-data-14109.json
+[90m2025-04-16T05:43:58.107Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending SDK event with data {
   userName: '[REDACTED]',
   accessKey: '[REDACTED]',
   event_type: 'SDKTestSuccessful',
   detectedFramework: 'WebdriverIO-mocha',
   event_properties: {
-    sdkRunId: 'a96a1ead-805b-4eae-ae95-c879e9f85088',
+    sdkRunId: 'fe87839c-2680-4555-8902-a00526a6536f',
     testhub_uuid: undefined,
     language_framework: 'WebdriverIO_mocha',
     referrer: 'WebdriverIO-mocha/9.12.4',
@@ -122,7 +122,7 @@
     }
   }
 }
-[90m2025-04-16T05:17:24.190Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Exception in sending funnel data: ResponseError: Error response from server 401:  {"message":"Unauthorized"}
+[90m2025-04-16T05:43:58.479Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Exception in sending funnel data: ResponseError: Error response from server 401:  {"message":"Unauthorized"}
     at fetchWrap (file:///Users/testvagrant/Work/Wdio_Pipeline/node_modules/@wdio/browserstack-service/build/index.js:256:11)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async fireFunnelRequest (file:///Users/testvagrant/Work/Wdio_Pipeline/node_modules/@wdio/browserstack-service/build/index.js:3147:20)
@@ -152,18 +152,18 @@
     }
   }
 }
-[90m2025-04-16T05:17:24.190Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m If facing any issues, please contact BrowserStack support with the Build Run Id - a96a1ead-805b-4eae-ae95-c879e9f85088
-[90m2025-04-16T05:17:25.123Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m Upload response: {
+[90m2025-04-16T05:43:58.480Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m If facing any issues, please contact BrowserStack support with the Build Run Id - fe87839c-2680-4555-8902-a00526a6536f
+[90m2025-04-16T05:43:59.286Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m Upload response: {
   "status": "failed",
   "message": "Invalid username or access-key. Visit https://www.browserstack.com/accounts/profile/details for more details."
 }
-[90m2025-04-16T05:17:25.853Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending SDK event with data {
+[90m2025-04-16T05:43:59.802Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending SDK event with data {
   userName: '[REDACTED]',
   accessKey: '[REDACTED]',
   event_type: 'SDKTestSuccessful',
   detectedFramework: 'WebdriverIO-mocha',
   event_properties: {
-    sdkRunId: 'a96a1ead-805b-4eae-ae95-c879e9f85088',
+    sdkRunId: 'fe87839c-2680-4555-8902-a00526a6536f',
     language_framework: 'WebdriverIO_mocha',
     referrer: 'WebdriverIO-mocha/9.12.4',
     language: 'WebdriverIO',
@@ -209,5 +209,5 @@
     }
   }
 }
-[90m2025-04-16T05:17:26.456Z[39m [31mERROR[39m [97m@wdio/browserstack-service[39m Error in sending funnel data: Error: Error response from server 401:  {"message":"Unauthorized"}
-[90m2025-04-16T05:17:28.732Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Successfully uploaded performance events Bravo
+[90m2025-04-16T05:44:00.231Z[39m [31mERROR[39m [97m@wdio/browserstack-service[39m Error in sending funnel data: Error: Error response from server 401:  {"message":"Unauthorized"}
+[90m2025-04-16T05:44:01.195Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Successfully uploaded performance events Bravo
