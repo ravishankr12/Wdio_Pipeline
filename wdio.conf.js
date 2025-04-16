@@ -10,8 +10,8 @@ export const config = {
   // user: "ravishanker_jvX2ZU",
   // key: "kqRrbsxx2WNJzhtyVget",
 
-  user: process.env.BROWSERSTACK_USER,
-  key: process.env.BROWSERSTACK_KEY,
+  // user: process.env.BROWSERSTACK_USER,
+  // key: process.env.BROWSERSTACK_KEY,
 
 
 
