@@ -4,54 +4,35 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    env:
-      ACTIONS_STEP_DEBUG: true  # Enables step debug logging
-      BS_USER: ${{ secrets.BS_USER }}
-      BS_KEY: ${{ secrets.BS_KEY }}
+    runs-on: ubuntu-22.04  # ✅ Use stable runner
 
     steps:
-      - name: Checkout the code
+      - name: 🧾 Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Setup Node.js
+
+      - name: 🔧 Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.0
 
-      - name: 🧹 Show Node, NPM, and Project Structure
+      - name: 📦 Install dependencies
         run: |
-          echo "Node Version:"
-          node -v
-          echo "NPM Version:"
-          npm -v
-          echo "List project files:"
-          ls -al
-          echo "Show current directory:"
-          pwd
-
-      - name: Install dependencies
-        run: |
-          echo "Installing NPM packages..."
+          echo "📦 Running npm install..."
           npm install
-          echo "Packages installed."
+          echo "✅ Dependencies installed."
 
-      - name: Run WDIO Tests
+      - name: 🧪 Run Tests
         env:
           BS_USER: ${{ secrets.BS_USER }}
           BS_KEY: ${{ secrets.BS_KEY }}
         run: |
-          echo Starting WDIO tests
+          echo "🧪 Starting tests with WebdriverIO..."
           npx wdio wdio.conf.js
-          echo WDIO test run complete
+          echo "✅ Test run completed."
 
-      - name: Upload logs if tests fail
+      - name: 📂 Upload logs if tests fail
         if: failure()
-        uses: actions/upload-artifact@v2 
+        uses: actions/upload-artifact@v3  # Or use v2 if needed
         with:
           name: logs
           path: logs
-
-      - name: Job complete
-        run: echo Workflow finished
