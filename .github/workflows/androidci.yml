@@ -29,3 +29,17 @@ jobs:
           echo "🧪 Starting tests with WebdriverIO..."
           npx wdio wdio.conf.js
           echo "✅ Test run completed."
+
+      - name: 🧰 Generate Allure Report
+        if: always() # ensures it runs even if tests fail
+        run: |
+          echo "📊 Generating Allure report..."
+          npx allure generate allure-results --clean -o allure-report
+          echo "✅ Allure report generated."
+
+      - name: 📤 Upload Allure Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: allure-report
