@@ -2,6 +2,11 @@ name: Android UI Tests
 
 on: [push]
 
+permissions:
+  contents: read
+  actions: read
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-22.04  # ✅ Use stable runner
@@ -30,16 +35,29 @@ jobs:
           npx wdio wdio.conf.js
           echo "✅ Test run completed."
 
-          - name: 📊 Generate Allure Report
-          if: always()
-          run: |
-            echo "📊 Generating Allure report..."
-            npx allure generate allure-results --clean -o allure-report
-            echo "📁 Allure report generated at: $(pwd)/allure-report"
-            echo "📄 HTML index: $(pwd)/allure-report/index.html"
-  
-          - name: 📂 List Report Directory (Debug)
-          if: always()
-          run: |
-            echo "🧾 Listing contents of allure-report:"
-            ls -R allure-report
+      - name: 📊 Generate Allure Report
+        if: always()
+        run: |
+          echo "📊 Generating Allure report..."
+          npx allure generate allure-results --clean -o allure-report
+          echo "📁 Allure report generated at: $(pwd)/allure-report"
+          echo "📄 HTML index: $(pwd)/allure-report/index.html"
+
+      - name: 📂 List Report Directory (Debug)
+        if: always()
+        run: |
+          echo "🧾 Listing contents of allure-report:"
+          ls -R allure-report
+
+      - name: 📦 Zip Allure Report
+        if: always()
+        run: |
+          zip -r allure-report.zip allure-report
+          echo "📦 Zipped report ready: allure-report.zip"
+
+      - name: ⬆️ Upload Allure Report Artifact
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-report
+          path: allure-report.zip
