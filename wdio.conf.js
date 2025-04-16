@@ -12,7 +12,8 @@ export const config = {
 
   // user: process.env.BROWSERSTACK_USER,
   // key: process.env.BROWSERSTACK_KEY,
-
+  user: process.env.BS_USER,
+  key: process.env.BS_KEY,
 
 
 
