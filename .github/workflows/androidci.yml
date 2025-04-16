@@ -1,25 +1,50 @@
 name: Android UI Tests
+
 on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    env:
+      ACTIONS_STEP_DEBUG: true  # Enables step debug logging
+      BS_USER: ${{ secrets.BS_USER }}
+      BS_KEY: ${{ secrets.BS_KEY }}
 
-      - name: Set up Node.js
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.0
 
+      - name: 🧹 Show Node, NPM, and Project Structure
+        run: |
+          echo "Node Version:"
+          node -v
+          echo "NPM Version:"
+          npm -v
+          echo "List project files:"
+          ls -al
+          echo "Show current directory:"
+          pwd
+
       - name: Install dependencies
-        run: npm install
+        run: |
+          echo "Installing NPM packages..."
+          npm install
+          echo "Packages installed."
 
       - name: Run WDIO Tests
         env:
-          BROWSERSTACK_USER: ${{ secrets.BS_USER }}
-          BROWSERSTACK_KEY: ${{ secrets.BS_KEY }}
-        run: npx wdio wdio.conf.js
+          BS_USER: ${{ secrets.BS_USER }}
+          BS_KEY: ${{ secrets.BS_KEY }}
+        run: |
+          echo Starting WDIO tests
+          npx wdio wdio.conf.js
+          echo WDIO test run complete
 
       - name: Upload logs if tests fail
         if: failure()
@@ -27,3 +52,6 @@ jobs:
         with:
           name: logs
           path: logs
+
+      - name: Job complete
+        run: echo Workflow finished
