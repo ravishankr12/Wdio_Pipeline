@@ -4,21 +4,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - uses: actions/setup-node@v2
-          with:
-            node-version: 18.0
-        - name: Install
-          run: npm install
-        - name: Test
-          env:
-            BS_USER: ${{ secrets.BS_USER }}
-            BS_KEY: ${{ secrets.BS_KEY }}
-          run: npx wdio wdio.conf.js
-        - name: Upload logs if tests fail
-          if: failure()
-          uses: actions/upload-artifact@v3
-          with:
-            name: logs
-            path: logs
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.0
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run WDIO Tests
+        env:
+          BS_USER: ${{ secrets.BS_USER }}
+          BS_KEY: ${{ secrets.BS_KEY }}
+        run: npx wdio wdio.conf.js
+
+      - name: Upload logs if tests fail
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: logs
+          path: logs
