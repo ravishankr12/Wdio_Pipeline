@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const config = {
-  // runner: "local",
+   runner: "local",
 
   //Browser_Stack credentials 
   //WHEN WE PASS THE VALUE FROM THE CONFIG FILE TO BROWSERSTACK
@@ -12,34 +12,34 @@ export const config = {
 
   // user: process.env.BROWSERSTACK_USER,
   // key: process.env.BROWSERSTACK_KEY,
-  user: process.env.BS_USER,
-  key: process.env.BS_KEY,
+  // user: process.env.BS_USER,
+  // key: process.env.BS_KEY,
 
 
 
   specs: ["./test/specs/android/UI_E2E.spec.js"],
   exclude: [],
   maxInstances: 10,
-  services: ["browserstack"],
-  // hostname: "localhost",
-  // port: 4723,
-  // path: "/wd/hub",
+  services: ["appium"],
+  hostname: "localhost",
+  port: 4723,
+  path: "/wd/hub",
   capabilities: [
     {
-      "platformName": "Android",
+      "appium:platformName": "Android",
       //"appium:deviceName": "Google Pixel 9",
       "appium:deviceName": "emulator-5554",
       "appium:platformVersion": "11.0",
       "appium:automationName": "UiAutomator2",
-      "appium:app": "bs://e1525b5769965b14339587d93ed9b49b95e3f532",
+      "appium:app": path.join(process.cwd(), "app/android/SauceLabs.apk"),
       "appium:autoGrantPermissions": true,
       "appium:appWaitActivity": "*",
-      "bstack:options": {
-        "projectName": "My Android E2E Tests",
-        "buildName": "Build 1.0",
-        "sessionName": "UI E2E Flow",
-        "idleTimeout": 300
-      }
+      // "bstack:options": {
+      //   "projectName": "My Android E2E Tests",
+      //   "buildName": "Build 1.0",
+      //   "sessionName": "UI E2E Flow",
+      //   "idleTimeout": 300
+      // }
     }
   ],
 
