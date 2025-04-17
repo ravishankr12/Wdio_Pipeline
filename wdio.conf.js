@@ -27,9 +27,9 @@ export const config = {
   capabilities: [
     {
       "platformName": "Android",
-      //"appium:deviceName": "Google Pixel 9",
-      "appium:deviceName": "emulator-5554",
-      "appium:platformVersion": "11.0",
+      "appium:deviceName": "Google Pixel 9",
+      //"appium:deviceName": "emulator-5554",
+      "appium:platformVersion": "15.0",
       "appium:automationName": "UiAutomator2",
       "appium:app": "bs://e1525b5769965b14339587d93ed9b49b95e3f532",
       "appium:autoGrantPermissions": true,
