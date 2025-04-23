@@ -1,14 +1,14 @@
-[90m2025-04-16T09:55:51.176Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m BrowserStack service started with id: 40f55cc3-c0d9-49fe-a898-e6ac4caccf43
-[90m2025-04-16T09:55:51.180Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m username/accesskey not passed
-[90m2025-04-16T09:55:51.180Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m app is not defined in browserstack-service config, skipping ...
-[90m2025-04-16T09:55:51.180Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending launch start event
-[90m2025-04-16T09:55:52.242Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m [Start_Build] Success response: {"success":false,"options":null,"code":null,"errors":[{"message":"Access to BrowserStack denied due to incorrect credentials.","key":"ERROR_INVALID_CREDENTIALS"}],"error_trace_id":"33024bc1-52bf-45b8-b9a0-efc71da681f1"}
-[90m2025-04-16T09:55:52.243Z[39m [31mERROR[39m [97m@wdio/browserstack-service[39m OBSERVABILITY Build creation failed null
-[90m2025-04-16T09:55:52.250Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m browserstackLocal is not enabled - skipping...
-[90m2025-04-16T09:55:54.549Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m teardown started
-[90m2025-04-16T09:55:54.549Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m teardown ended
-[90m2025-04-16T09:55:54.984Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Inside OnComplete hook..
-[90m2025-04-16T09:55:54.984Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending stop launch event
-[90m2025-04-16T09:55:54.984Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m [STOP_BUILD] Missing Authentication Token/ Build ID
-[90m2025-04-16T09:55:54.988Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m BrowserStack service run ended for id: 40f55cc3-c0d9-49fe-a898-e6ac4caccf43 testhub id: undefined
-[90m2025-04-16T09:55:56.544Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Successfully uploaded performance events Bravo
+[90m2025-04-22T06:47:32.908Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m BrowserStack service started with id: f55c8849-1b46-4ca7-b77a-1366dcb9fa33
+[90m2025-04-22T06:47:32.950Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m username/accesskey not passed
+[90m2025-04-22T06:47:32.951Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m app is not defined in browserstack-service config, skipping ...
+[90m2025-04-22T06:47:32.953Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending launch start event
+[90m2025-04-22T06:47:34.082Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m [Start_Build] Success response: {"success":false,"options":null,"code":null,"errors":[{"message":"Access to BrowserStack denied due to incorrect credentials.","key":"ERROR_INVALID_CREDENTIALS"}],"error_trace_id":"68372036-1a10-4e63-ac7c-f651697e08a7"}
+[90m2025-04-22T06:47:34.083Z[39m [31mERROR[39m [97m@wdio/browserstack-service[39m OBSERVABILITY Build creation failed null
+[90m2025-04-22T06:47:34.087Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m browserstackLocal is not enabled - skipping...
+[90m2025-04-22T06:47:51.447Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m teardown started
+[90m2025-04-22T06:47:51.447Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m teardown ended
+[90m2025-04-22T06:47:53.081Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Inside OnComplete hook..
+[90m2025-04-22T06:47:53.083Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Sending stop launch event
+[90m2025-04-22T06:47:53.084Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m [STOP_BUILD] Missing Authentication Token/ Build ID
+[90m2025-04-22T06:47:53.089Z[39m [96mINFO[39m [97m@wdio/browserstack-service[39m BrowserStack service run ended for id: f55c8849-1b46-4ca7-b77a-1366dcb9fa33 testhub id: undefined
+[90m2025-04-22T06:47:58.797Z[39m [32mDEBUG[39m [97m@wdio/browserstack-service[39m Successfully uploaded performance events Bravo
