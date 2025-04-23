@@ -20,7 +20,7 @@ export const config = {
       "appium:app": path.join(process.cwd(), "app/android/SauceLabs.apk"),
       "appium:autoGrantPermissions": true,
       "appium:appWaitActivity": "*",
-    }
+    },
     {
       "appium:platformName": "Android",
       "appium:deviceName": "emulator-5556", // Second emulator
